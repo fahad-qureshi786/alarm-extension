@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Element Checker",
+  "version": "1.0",
+  "description": "Checks if a DOM element has child elements and plays an MP3 file.",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
